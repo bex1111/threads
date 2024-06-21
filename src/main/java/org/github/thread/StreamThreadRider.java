@@ -1,6 +1,7 @@
 package org.github.thread;
 
 import java.security.SecureRandom;
+import java.util.concurrent.ForkJoinPool;
 import java.util.stream.IntStream;
 
 public class StreamThreadRider {
@@ -21,9 +22,9 @@ public class StreamThreadRider {
     }
 
     private void printThread(int number) {
-        System.out.printf("Thread start working on %s task. Thread name: %s%n", number ,Thread.currentThread().getName());
+        System.out.printf("Thread start working on %s task. Thread name: %s%n", number, Thread.currentThread().getName());
         sleepThread(secureRandom.nextInt(1000));
-        System.out.printf("Thread finish working on %s task. Thread name: %s%n", number ,Thread.currentThread().getName());
+        System.out.printf("Thread finish working on %s task. Thread name: %s%n", number, Thread.currentThread().getName());
     }
 
     private void sleepThread(int time) {
