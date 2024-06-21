@@ -5,18 +5,18 @@ import java.util.stream.IntStream;
 public class KeyWordPresenter {
 
 
-    volatile Integer volatileInteger = 0;
-     Integer integer = 0;
-    final Object locker = new Object();
+    private volatile Integer volatileInteger = 0;
+    private Integer integer = 0;
+    private final Object locker = new Object();
 
 
     public static void main(String[] args) {
         KeyWordPresenter presenter = new KeyWordPresenter();
-        presenter.presentWithVolatile();
-        presenter.presentWithoutVolatile();
+        presenter.demoWithVolatile();
+        presenter.demoWithoutVolatile();
     }
 
-    private void presentWithVolatile() {
+    private void demoWithVolatile() {
         IntStream.range(1, 101).parallel().forEach(x -> volatileInteger++);
         System.out.printf("%s %s%n", "volatileInteger", volatileInteger);
         volatileInteger = 0;
@@ -25,10 +25,10 @@ public class KeyWordPresenter {
                 volatileInteger++;
             }
         });
-        System.out.printf("%s %s%n",  "volatileInteger", volatileInteger);
+        System.out.printf("%s %s%n", "volatileInteger", volatileInteger);
     }
 
-    private void presentWithoutVolatile() {
+    private void demoWithoutVolatile() {
         IntStream.range(1, 101).parallel().forEach(x -> integer++);
         System.out.printf("%s %s%n", integer.getClass().getSimpleName(), integer);
         integer = 0;

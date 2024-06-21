@@ -6,10 +6,10 @@ public class ThreadLocalPresenter {
 
     public static void main(String[] args) {
         ThreadLocalPresenter presenter = new ThreadLocalPresenter();
-        presenter.presentThreadLocal();
+        presenter.demo();
     }
 
-    private void presentThreadLocal() {
+    private void demo() {
         ThreadLocal<Integer> threadLocal = ThreadLocal.withInitial(() -> 0);
 
         IntStream.range(1, 101).parallel().forEach(x -> threadLocal.set(threadLocal.get() + 1));

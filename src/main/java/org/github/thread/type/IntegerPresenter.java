@@ -5,16 +5,16 @@ import java.util.stream.IntStream;
 
 public class IntegerPresenter {
 
-    Integer boxedInteger = 0;
-    int primitiveInteger = 0;
-    AtomicInteger atomicInteger = new AtomicInteger(0);
+   private Integer boxedInteger = 0;
+   private int primitiveInteger = 0;
+   private AtomicInteger atomicInteger = new AtomicInteger(0);
 
     public static void main(String[] args) {
         IntegerPresenter presenter = new IntegerPresenter();
-        presenter.presentThreadLocal();
+        presenter.demo();
     }
 
-    private void presentThreadLocal() {
+    private void demo() {
         IntStream.range(1, 101).parallel().forEach(x -> boxedInteger++);
         IntStream.range(1, 101).parallel().forEach(x -> primitiveInteger++);
         IntStream.range(1, 101).parallel().forEach(x -> atomicInteger.incrementAndGet());
