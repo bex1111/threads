@@ -25,7 +25,7 @@ public class KeyWordPresenter {
                 volatileInteger++;
             }
         });
-        System.out.printf("%s %s%n", "volatileInteger", volatileInteger);
+        System.out.printf("%s %s%n", "volatileInteger with synchronized", volatileInteger);
     }
 
     private void demoWithoutVolatile() {
@@ -37,6 +37,6 @@ public class KeyWordPresenter {
                 integer++;
             }
         });
-        System.out.printf("%s %s%n", integer.getClass().getSimpleName(), integer);
+        System.out.printf("%s %s %s%n", integer.getClass().getSimpleName(),"with synchronized", integer);
     }
 }

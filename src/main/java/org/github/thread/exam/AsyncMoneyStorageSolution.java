@@ -2,7 +2,7 @@ package org.github.thread.exam;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class AsyncMoneyStorageSolution extends AsyncMoneyStorage {
+public class AsyncMoneyStorageSolution extends AsyncMoneyStorageExam {
 
     private final AtomicInteger money;
 

@@ -7,7 +7,7 @@ public class IntegerPresenter {
 
    private Integer boxedInteger = 0;
    private int primitiveInteger = 0;
-   private AtomicInteger atomicInteger = new AtomicInteger(0);
+   private final AtomicInteger atomicInteger = new AtomicInteger(0);
 
     public static void main(String[] args) {
         IntegerPresenter presenter = new IntegerPresenter();

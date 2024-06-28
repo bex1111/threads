@@ -1,10 +1,10 @@
 package org.github.thread.exam;
 
-public class AsyncMoneyStorage {
+public class AsyncMoneyStorageExam {
 
     private int money;
 
-    public AsyncMoneyStorage() {
+    public AsyncMoneyStorageExam() {
         this.money = 0;
     }
 

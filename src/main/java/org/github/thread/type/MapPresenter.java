@@ -16,8 +16,7 @@ public class MapPresenter {
 
     private void demo(Map<Integer, Integer> map) {
         map.put(0, 0);
-        int endExclusive = 200;
-        IntStream.range(1, endExclusive)
+        IntStream.range(1, 200)
                 .parallel()
                 .forEach(x -> map.computeIfPresent(0, (key, value) -> value + 1));
         System.out.printf("Map type: %s Value sum: %s Elements: %s%n",

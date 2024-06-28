@@ -7,13 +7,13 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class AsyncMoneyStorageTest {
+class AsyncMoneyStorageExamTest {
 
-    private AsyncMoneyStorage asyncMoneyStorage;
+    private AsyncMoneyStorageExam asyncMoneyStorage;
 
     @BeforeEach
     void setUp() {
-        asyncMoneyStorage = new AsyncMoneyStorageSolution();
+        asyncMoneyStorage = new AsyncMoneyStorageExam();
     }
 
     @Test
